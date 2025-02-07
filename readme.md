@@ -1,6 +1,6 @@
 
 
-```markdown
+
 # Laptop Battery Report Generator
 
 ## Overview
@@ -28,9 +28,9 @@ The **Laptop Battery Report Generator** is a web application that allows users t
 1. Clone this repository to your local machine
    
 2. Navigate to the project directory:
-   ```bash
+
    cd Battery-Report
-   ```
+
 3. Execute the server.py file 
 
 3. open Browser and go -(http://127.0.0.1:5000)
