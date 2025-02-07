@@ -1,7 +1,7 @@
 
 
 
-# Laptop Battery Report Generator
+# Laptop Battery Report Generator 🔋
 
 ## Overview
 The **Laptop Battery Report Generator** is a web application that allows users to generate and view reports related to their laptop's battery health. The application provides features for generating a battery report, viewing the report, and checking the battery health percentage, all in a user-friendly interface.
