@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day/Night Mode Toggle</title>
+  <style>
+    body {
+      transition: background-color 0.5s, color 0.5s;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .toggle-label {
+      font-size: 18px;
+      margin-right: 10px;
+    }
+    .toggle {
+      position: relative;
+      display: inline-block;
+      width: 70px;
+      height: 34px;
+    }
+    .toggle input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 34px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "🌞";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+    input:checked + .slider:before {
+      transform: translateX(36px);
+      content: "🌙";
+    }
+  </style>
+</head>
+<body>
+  <div class="toggle-container">
+    <span class="toggle-label" id="toggleText">Day Mode</span>
+    <div class="toggle">
+      <input type="checkbox" id="dayNightToggle">
+      <label class="slider" for="dayNightToggle"></label>
+    </div>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('dayNightToggle');
+    const body = document.body;
+    const toggleText = document.getElementById('toggleText');
+
+    toggle.addEventListener('change', function() {
+      if (this.checked) {
+        body.style.backgroundColor = '#333';
+        body.style.color = '#fff';
+        toggleText.textContent = 'Night Mode';
+      } else {
+        body.style.backgroundColor = '#fff';
+        body.style.color = '#333';
+        toggleText.textContent = 'Day Mode';
+      }
+    });
+  </script>
+</body>
+</html>
