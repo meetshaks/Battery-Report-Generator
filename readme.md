@@ -1,4 +1,4 @@
-Sure! Here’s the content for the `README.md` file. You can copy it into a file named `README.md` or download it directly from the link below.
+
 
 ```markdown
 # Laptop Battery Report Generator
